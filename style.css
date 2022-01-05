@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bitter', serif;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  color: #000000;
+}
+
+#open {
+  background-color: #C6B3A6;
+  color: #fefefe;
+  padding: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+
+#close {
+  background-color: #C6B3A6;
+  color: #fefefe;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+
+#btn-refuse {
+  cursor: pointer;
+  bottom: 0px;
+  position: absolute;
+  font-size: 0.7rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-container.active {
+  display: flex;
+}
+
+.popup {
+  font-family: 'Bitter', serif;
+  background-color: #fefefe;
+  border-radius: 15px;
+  border: solid 14px #fefefe;
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+
+}
+
+
+.popup button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.popup h1 {
+  color: #C6B3A6;
+}
+
+label {
+  font-family: 'Bitter', serif;
+  display: block;
+  width: 200px;
+  margin: 25px auto 0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+span {
+  font-size: 1rem;
+  color: #C6B3A6;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.picture {
+  position: relative;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.btn-back {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  margin-left: 30px;
+}
+
+.btn-back:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .btn-back {
+      width: 30px;
+      top: -5px;
+      left: -20px;
+  }
+
+  .popup {
+    width: 100%;
+  }
+
+  .popup-container {
+    overflow: scroll;
+  }
+}
